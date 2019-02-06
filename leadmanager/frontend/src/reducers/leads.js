@@ -21,11 +21,11 @@ export default function (state = initialState, action) {
         ...state,
         leads: [...state.leads, action.payload]
       };
-    case CLEAR_LEADS:
-      return {
-        ...state,
-        leads: []
-      };
+    // case CLEAR_LEADS:
+    //   return {
+    //     ...state,
+    //     leads: []
+    //   };
     default:
       return state;
   }

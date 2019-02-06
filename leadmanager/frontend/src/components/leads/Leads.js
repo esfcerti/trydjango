@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getLeads, deleteLead } from "../../actions/leads";
 
+import TextField from '@material-ui/core/TextField';
+
 export class Leads extends Component {
   static propTypes = {
     leads: PropTypes.array.isRequired,
@@ -18,6 +20,17 @@ export class Leads extends Component {
     return (
       <Fragment>
         <h2>Leads</h2>
+        
+        <TextField
+          id="date"
+          label="Birthday"
+          type="date"
+          defaultValue="2017-05-24"                    
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+
         <table className="table table-striped">
           <thead>
             <tr>

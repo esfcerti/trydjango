@@ -15,6 +15,8 @@ import Dashboard from "./leads/Dashboard";
 import Alerts from "./layout/Alerts";
 import Login from "./accounts/Login";
 import Register from "./accounts/Register";
+import Client from "./client/Client";
+
 import PrivateRoute from "./common/PrivateRoute";
 
 import { Provider } from "react-redux";
@@ -43,6 +45,7 @@ class App extends Component {
               <div className="container">
                 <Switch>
                   <PrivateRoute exact path="/" component={Dashboard} />
+                  <PrivateRoute exact path="/client" component={Client} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
                 </Switch>
